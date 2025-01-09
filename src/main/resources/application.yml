@@ -1,0 +1,31 @@
+
+spring:
+  application:
+    name: eureka-server
+  cloud:
+    discovery:
+      enabled: true
+    loadbalancer:
+      enabled: true
+server:
+  port: 8761
+  
+eureka:
+  server:
+    enable-self-preservation: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 10  # Time in seconds for how often the instance renews its lease
+    lease-expiration-duration-in-seconds: 30  # Time in seconds for instance expiration when no renewal
+    metadata-map:
+      instanceId: ${spring.application.name}:${random.value}  # Unique instance ID based on the app name and random value
+      
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
