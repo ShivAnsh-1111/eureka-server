@@ -1,6 +1,9 @@
 # Use an official Java runtime as a parent image
 FROM openjdk:17-jdk-slim
 
+ENV HOSTNAME=chess-server
+ENV POD_IP=54.254.162.138
+
 # Set the working directory in the container
 WORKDIR /app
 
