@@ -1,8 +1,13 @@
 # Use an official Java runtime as a parent image
 FROM openjdk:17-jdk-slim
 
+# Set environment variables
+ENV PROFILE=PRODUCTION
+ENV EUREKA_DEFAULT=http://10.220.191.94/eureka/
+ENV SERVER_PORT=8761
 ENV HOSTNAME=chess-server
 ENV POD_IP=54.254.162.138
+ENV RANDOM_VALUE=1234
 
 # Set the working directory in the container
 WORKDIR /app
