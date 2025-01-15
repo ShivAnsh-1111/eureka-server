@@ -5,9 +5,10 @@ FROM openjdk:17-jdk-slim
 ENV PROFILE=PRODUCTION
 ENV EUREKA_DEFAULT=https://eureka-server-yzjr.onrender.com/eureka/
 ENV SERVER_PORT=8761
-ENV HOSTNAME=chess-server
-ENV POD_IP=
-ENV RANDOM_VALUE=1234
+ENV HOSTNAME=""
+ENV POD_IP=""
+ENV RANDOM_VALUE=""
+ENV spring.application.name=""
 
 # Set the working directory in the container
 WORKDIR /app
