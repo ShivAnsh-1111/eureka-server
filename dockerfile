@@ -3,10 +3,10 @@ FROM openjdk:17-jdk-slim
 
 # Set environment variables
 ENV PROFILE=PRODUCTION
-ENV EUREKA_DEFAULT=http://44.227.217.144/eureka/
+ENV EUREKA_DEFAULT=https://eureka-server-yzjr.onrender.com/eureka/
 ENV SERVER_PORT=8761
 ENV HOSTNAME=chess-server
-ENV POD_IP=44.227.217.144
+ENV POD_IP=
 ENV RANDOM_VALUE=1234
 
 # Set the working directory in the container
