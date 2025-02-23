@@ -17,7 +17,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://65.0.7.190:30080/eureka/
+      defaultZone: http://3.109.58.94:30080/eureka/
   instance:
     #hostname: localhost
     lease-renewal-interval-in-seconds: 10  # Time in seconds for how often the instance renews its lease
