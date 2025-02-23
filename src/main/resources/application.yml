@@ -8,22 +8,22 @@ spring:
     loadbalancer:
       enabled: true
 server:
-  port: 8761
+  port: 30080
   
 eureka:
   server:
-    enable-self-preservation: false
+    enable-self-preservation: true
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://65.0.7.190:30080/eureka/
   instance:
-    hostname: localhost
+    #hostname: localhost
     lease-renewal-interval-in-seconds: 10  # Time in seconds for how often the instance renews its lease
     lease-expiration-duration-in-seconds: 30  # Time in seconds for instance expiration when no renewal
     metadata-map:
-      instanceId: ${spring.application.name}:${random.value}  # Unique instance ID based on the app name and random value
+      #instanceId: ${spring.application.name}:${random.value}  # Unique instance ID based on the app name and random value
       
 logging:
   level:
