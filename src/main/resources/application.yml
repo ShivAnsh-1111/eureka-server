@@ -7,8 +7,9 @@ spring:
       enabled: true
     loadbalancer:
       enabled: true
-#server:
-  #port: 30080
+server:
+  port: 8761
+  address: 0.0.0.0
   
 eureka:
   server:
