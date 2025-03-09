@@ -9,7 +9,7 @@ spring:
       enabled: true
 server:
   port: 8761
-  #address: 0.0.0.0
+  address: 0.0.0.0
   
 eureka:
   server:
@@ -23,7 +23,7 @@ eureka:
     #hostname: localhost
     lease-renewal-interval-in-seconds: 10  # Time in seconds for how often the instance renews its lease
     lease-expiration-duration-in-seconds: 30  # Time in seconds for instance expiration when no renewal
-    metadata-map:
+    #metadata-map:
       #instanceId: ${spring.application.name}:${random.value}  # Unique instance ID based on the app name and random value
       
 logging:
