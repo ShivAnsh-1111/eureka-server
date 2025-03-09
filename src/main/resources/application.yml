@@ -9,7 +9,7 @@ spring:
       enabled: true
 server:
   port: 8761
-  address: 0.0.0.0
+  #address: 0.0.0.0
   
 eureka:
   server:
@@ -28,5 +28,5 @@ eureka:
       
 logging:
   level:
-    com.netflix.eureka: OFF
-    com.netflix.discovery: OFF
+    '[com.netflix.eureka]': debug
+    '[com.netflix.discovery]': debug
